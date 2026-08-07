@@ -6,29 +6,17 @@ import { Heart, Users, Briefcase, Music, Share2 } from "lucide-react";
 import { FaWhatsapp, FaFacebookF, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMail, HiOutlineClipboardCopy } from "react-icons/hi";
+import { QRCodeSVG } from "qrcode.react";
 
 const WHATSAPP_URL = "https://wa.me/2348068398878";
+const ACCOUNT_NUMBER = "2089116861";
 
-const cards = [
-  {
-    icon: Heart,
-    title: "Donate",
-    desc: "Your generous donation supports the production, promotion, and distribution of this anointed music ministry.",
-    action: "Give Now",
-    detail: [
-      { label: "Bank Name", value: "UBA" },
-      { label: "Account Name", value: "Inyeneobong Nsubong" },
-      { label: "Account Number", value: "2089116861" },
-    ],
-    href: "",
-    isShare: false,
-  },
+const otherCards = [
   {
     icon: Users,
     title: "Become a Ministry Partner",
     desc: "Partner with us in a consistent, prayerful, and financial commitment to sustain the vision of this ministry.",
     action: "Partner With Us",
-    detail: [],
     href: WHATSAPP_URL,
     isShare: false,
   },
@@ -37,7 +25,6 @@ const cards = [
     title: "Sponsor Future Projects",
     desc: "Invest in future gospel music projects and become part of a legacy that touches nations.",
     action: "Become a Sponsor",
-    detail: [],
     href: WHATSAPP_URL,
     isShare: false,
   },
@@ -46,7 +33,6 @@ const cards = [
     title: "Support Music Ministry",
     desc: "Help fund recording sessions, music videos, live events, and ministerial outreaches.",
     action: "Support",
-    detail: [],
     href: WHATSAPP_URL,
     isShare: false,
   },
@@ -55,7 +41,6 @@ const cards = [
     title: "Share This Release",
     desc: "The simplest act of sharing can carry this message of worship to someone who desperately needs it.",
     action: "Share Now",
-    detail: [],
     href: "",
     isShare: true,
   },
@@ -63,11 +48,21 @@ const cards = [
 
 export default function SupportSection() {
   const [shareOpen, setShareOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const shareText = "Check out this new worship release – NO DEMAND by Inyeneobong Nsubong!";
 
   function getPageUrl() {
     return typeof window !== "undefined" ? window.location.href : "";
+  }
+
+  function handleCopyAccount() {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(ACCOUNT_NUMBER).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      }).catch(() => {});
+    }
   }
 
   function handleShare() {
@@ -116,8 +111,79 @@ export default function SupportSection() {
           <div className="w-20 h-0.5 bg-yellow-400 mx-auto mt-4" />
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((c, i) => (
+        {/* Large Donate Box */}
+        <FadeIn className="mb-8">
+          <article
+            className="card-hover glass-dark rounded-2xl p-8 sm:p-10 lg:p-12 flex flex-col items-center text-center"
+            style={{ border: "1px solid rgba(212,175,55,0.2)" }}
+          >
+            <div
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6"
+              style={{
+                background: "linear-gradient(135deg, rgba(6,64,43,0.8), rgba(52,21,57,0.8))",
+                border: "1px solid rgba(212,175,55,0.3)",
+              }}
+            >
+              <Heart className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-400" aria-hidden="true" />
+            </div>
+            <h3
+              className="text-white font-bold text-2xl sm:text-3xl mb-3"
+              style={{ fontFamily: "Cinzel, serif" }}
+            >
+              Donate
+            </h3>
+            <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 max-w-lg" style={{ fontFamily: "Lato, sans-serif" }}>
+              Your generous donation supports the production, promotion, and distribution of this anointed music ministry.
+            </p>
+
+            {/* Bank details */}
+            <div className="glass rounded-xl p-5 sm:p-6 mb-6 w-full max-w-md space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="text-white/40 text-sm" style={{ fontFamily: "Lato, sans-serif" }}>Bank Name</span>
+                <span className="text-white text-sm font-semibold" style={{ fontFamily: "Lato, sans-serif" }}>UBA</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-white/40 text-sm" style={{ fontFamily: "Lato, sans-serif" }}>Account Name</span>
+                <span className="text-white text-sm font-semibold" style={{ fontFamily: "Lato, sans-serif" }}>Inyeneobong Nsubong</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-white/40 text-sm" style={{ fontFamily: "Lato, sans-serif" }}>Account Number</span>
+                <span className="text-white text-sm font-semibold" style={{ fontFamily: "Lato, sans-serif" }}>{ACCOUNT_NUMBER}</span>
+              </div>
+            </div>
+
+            {/* QR Code */}
+            <div className="mb-6 cursor-pointer" onClick={handleCopyAccount} title="Click to copy account number">
+              <div className="bg-white rounded-xl p-3 inline-block">
+                <QRCodeSVG value={ACCOUNT_NUMBER} size={140} />
+              </div>
+              <p className="text-white/50 text-xs mt-2" style={{ fontFamily: "Lato, sans-serif" }}>
+                Scan or click QR code to copy account number
+              </p>
+            </div>
+
+            {/* Give Now button */}
+            <button
+              className="btn-ripple w-full max-w-xs py-3 rounded-full text-base font-semibold text-black tracking-wider"
+              style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
+              type="button"
+              onClick={handleCopyAccount}
+            >
+              Give Now
+            </button>
+
+            {/* Copied feedback */}
+            {copied && (
+              <p className="mt-3 text-yellow-400 text-sm font-semibold animate-pulse">
+                Account Number Copied
+              </p>
+            )}
+          </article>
+        </FadeIn>
+
+        {/* Other support cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {otherCards.map((c, i) => (
             <FadeIn key={c.title} delay={0.1 * i}>
               <article
                 className="card-hover glass-dark rounded-2xl p-6 h-full flex flex-col"
@@ -142,21 +208,6 @@ export default function SupportSection() {
                   {c.desc}
                 </p>
 
-                {/* Bank details for donate card */}
-                {c.detail.length > 0 && (
-                  <div className="glass rounded-xl p-3 mb-4 space-y-1.5">
-                    {c.detail.map((d) => (
-                      <div key={d.label} className="flex justify-between items-center">
-                        <span className="text-white/40 text-xs" style={{ fontFamily: "Lato, sans-serif" }}>{d.label}</span>
-                        <span className="text-white text-xs font-semibold" style={{ fontFamily: "Lato, sans-serif" }}>{d.value}</span>
-                      </div>
-                    ))}
-                    <div className="pt-2 mt-2 border-t border-white/10 text-center">
-                      <span className="text-white/40 text-xs">QR Code Placeholder</span>
-                    </div>
-                  </div>
-                )}
-
                 {c.isShare ? (
                   <button
                     className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider"
@@ -166,7 +217,7 @@ export default function SupportSection() {
                   >
                     {c.action}
                   </button>
-                ) : c.href ? (
+                ) : (
                   <a
                     href={c.href}
                     target="_blank"
@@ -176,14 +227,6 @@ export default function SupportSection() {
                   >
                     {c.action}
                   </a>
-                ) : (
-                  <button
-                    className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider"
-                    style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
-                    type="button"
-                  >
-                    {c.action}
-                  </button>
                 )}
               </article>
             </FadeIn>

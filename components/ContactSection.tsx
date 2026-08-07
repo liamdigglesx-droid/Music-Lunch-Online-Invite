@@ -6,18 +6,18 @@ import { SiAudiomack } from "react-icons/si";
 import type { IconType } from "react-icons";
 
 const contacts = [
-  { icon: Mail, label: "Booking Email", value: "booking@placeholder.com", href: "mailto:booking@placeholder.com" },
-  { icon: Mail, label: "Ministry Email", value: "ministry@placeholder.com", href: "mailto:ministry@placeholder.com" },
-  { icon: Phone, label: "Phone Number", value: "+234 000 000 0000", href: "tel:+2340000000000" },
-  { icon: User, label: "Management Contact", value: "management@placeholder.com", href: "mailto:management@placeholder.com" },
+  { icon: Mail, label: "Booking Email", value: "inyeneobongjoshua@gmail.com", href: "mailto:inyeneobongjoshua@gmail.com" },
+  { icon: Mail, label: "Management Email", value: "inyeneobongjoshua@gmail.com", href: "mailto:inyeneobongjoshua@gmail.com" },
+  { icon: Phone, label: "Phone Number", value: "+234 806 839 8878", href: "tel:+2348068398878" },
+  { icon: User, label: "Contact Email", value: "inyeneobongjoshua@gmail.com", href: "mailto:inyeneobongjoshua@gmail.com" },
 ];
 
 const socials: { name: string; icon: IconType; href: string; label: string }[] = [
-  { name: "Instagram", icon: FaInstagram, href: "#", label: "Follow on Instagram" },
+  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/princeinyeneobongnsubong?igsh=MTcxdnFtdHhieTY4dA==", label: "Follow on Instagram" },
   { name: "Facebook", icon: FaFacebookF, href: "#", label: "Follow on Facebook" },
   { name: "TikTok", icon: FaTiktok, href: "#", label: "Follow on TikTok" },
   { name: "YouTube", icon: FaYoutube, href: "#", label: "Subscribe on YouTube" },
-  { name: "X", icon: FaXTwitter, href: "#", label: "Follow on X" },
+  { name: "X", icon: FaXTwitter, href: "https://x.com/Engr_Richjtom", label: "Follow on X" },
   { name: "Spotify", icon: FaSpotify, href: "#", label: "Follow on Spotify" },
   { name: "Apple Music", icon: FaApple, href: "#", label: "Listen on Apple Music" },
   { name: "Boomplay", icon: FaMusic, href: "#", label: "Follow on Boomplay" },
