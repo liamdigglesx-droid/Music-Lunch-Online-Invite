@@ -42,23 +42,13 @@ export default function AboutSection() {
               <div
                 className="relative aspect-square rounded-3xl overflow-hidden glass-dark"
                 style={{ border: "1px solid rgba(212,175,55,0.2)", maxWidth: 420, margin: "0 auto" }}
-                role="img"
-                aria-label="Placeholder for Inyeneobong Nsubong portrait"
               >
-                <div
-                  className="w-full h-full flex items-center justify-center flex-col gap-4 p-8"
-                  style={{ background: "linear-gradient(135deg, rgba(6,64,43,0.5), rgba(52,21,57,0.5))" }}
-                >
-                  <div
-                    className="w-28 h-28 rounded-full flex items-center justify-center"
-                    style={{ background: "rgba(212,175,55,0.15)", border: "2px solid rgba(212,175,55,0.4)" }}
-                  >
-                    <span className="text-5xl">🎵</span>
-                  </div>
-                  <p className="text-yellow-400/70 text-sm tracking-widest uppercase text-center">
-                    Artist Portrait
-                  </p>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
+                  alt="Inyeneobong Nsubong portrait"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </FadeIn>
