@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NO DEMAND – Official Single Launch Website
+
+A premium, responsive, production-ready landing website for the official launch of the gospel music single **"NO DEMAND"** by **Inyeneobong Nsubong**.
+
+## Event Details
+
+- **Date:** Sunday, 13th September 2026
+- **Time:** 10:30 AM (WAT)
+- **Venue:** The Apostolic Church, 69 Oron Road, Uyo, Akwa Ibom State
+
+## Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Fonts:** Cinzel & Lato (Google Fonts)
+
+## Features
+
+- Sticky navigation (transparent → blur on scroll)
+- Full-screen hero with live countdown timer, particles, and audio waveform
+- Artist biography section
+- Single details (song story, scriptural inspiration, production credits)
+- Dramatic countdown section
+- Launch event info with Google Maps placeholder
+- Support & donations section
+- Streaming platforms grid (Spotify, Apple Music, YouTube Music, Boomplay, Audiomack, Amazon Music, Deezer, TIDAL)
+- Responsive gallery with lightbox
+- Contact information & social media links
+- Accessible, SEO-optimised, WCAG 2.2 AA compliant
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Before launch, update the following placeholder values in the source files:
 
-## Learn More
+| Location | Placeholder |
+|---|---|
+| `components/SupportSection.tsx` | Bank Name, Account Name, Account Number, QR Code, donation URL |
+| `components/ContactSection.tsx` | Booking/Ministry email, phone, management contact, social media URLs |
+| `components/Footer.tsx` | Social media URLs, Privacy Policy / Terms links |
+| `components/HeroSection.tsx` | Replace the artist image placeholder with the real photo |
+| `components/AboutSection.tsx` | Replace artist portrait placeholder |
+| `components/SingleSection.tsx` | Song story, scriptural inspiration, producer, featured artist, artwork |
+| `components/GallerySection.tsx` | Replace emoji placeholders with real gallery images |
 
-To learn more about Next.js, take a look at the following resources:
+## Brand Colours
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Token | Value |
+|---|---|
+| Dark Green | `#06402B` |
+| Dark Purple | `#341539` |
+| Soft Gold | `#D4AF37` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© Inyeneobong Nsubong. All rights reserved.

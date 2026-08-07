@@ -56,7 +56,7 @@ export default function CountdownTimer({ large = false }: Props) {
       className="flex gap-3 sm:gap-4"
       role="timer"
       aria-label="Countdown to NO DEMAND launch"
-      aria-live="polite"
+      aria-live="off"
     >
       {[
         { value: time.days, label: "Days" },

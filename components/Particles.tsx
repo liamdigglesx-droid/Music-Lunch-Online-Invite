@@ -40,25 +40,29 @@ export default function Particles() {
     function draw() {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((p, i) => {
+
+      // Iterate in reverse to safely remove dead particles
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
         p.y -= p.speed;
         p.x += Math.sin(p.y * 0.01) * 0.5;
         if (p.y < -20) {
-          particles.splice(i, 1);
-          particles.push({
+          // Replace expired particle with a new one
+          particles[i] = {
             x: Math.random() * canvas.width,
             y: canvas.height + 10,
             r: Math.random() * 3 + 1,
             speed: Math.random() * 0.6 + 0.3,
             opacity: Math.random() * 0.5 + 0.1,
             color: colors[Math.floor(Math.random() * colors.length)],
-          });
+          };
         }
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fillStyle = p.color + Math.floor(p.opacity * 255).toString(16).padStart(2, "0");
         ctx.fill();
-      });
+      }
+
       animId = requestAnimationFrame(draw);
     }
 
