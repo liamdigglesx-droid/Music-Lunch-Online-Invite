@@ -15,8 +15,8 @@ const contacts = [
 const socials: { name: string; icon: IconType; href: string; label: string }[] = [
   { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/princeinyeneobongnsubong?igsh=MTcxdnFtdHhieTY4dA==", label: "Follow on Instagram" },
   { name: "Facebook", icon: FaFacebookF, href: "#", label: "Follow on Facebook" },
-  { name: "TikTok", icon: FaTiktok, href: "#", label: "Follow on TikTok" },
-  { name: "YouTube", icon: FaYoutube, href: "#", label: "Subscribe on YouTube" },
+  { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@richjtom?_r=1&_t=ZS-98gfkgwfFeG", label: "Follow on TikTok" },
+  { name: "YouTube", icon: FaYoutube, href: "https://youtube.com/@inyensjoetom?si=VlDNwuiob3F8Pv9D", label: "Subscribe on YouTube" },
   { name: "X", icon: FaXTwitter, href: "https://x.com/Engr_Richjtom", label: "Follow on X" },
   { name: "Spotify", icon: FaSpotify, href: "#", label: "Follow on Spotify" },
   { name: "Apple Music", icon: FaApple, href: "#", label: "Listen on Apple Music" },
