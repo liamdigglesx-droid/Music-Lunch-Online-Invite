@@ -1,5 +1,5 @@
 import { Music } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube, FaSpotify, FaApple, FaTiktok } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
 const navLinks = [
@@ -10,8 +10,9 @@ const navLinks = [
 
 const socials: { name: string; icon: IconType; href: string }[] = [
   { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/princeinyeneobongnsubong?igsh=MTcxdnFtdHhieTY4dA==" },
+  { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@richjtom?_r=1&_t=ZS-98gfkgwfFeG" },
   { name: "Facebook", icon: FaFacebookF, href: "#" },
-  { name: "YouTube", icon: FaYoutube, href: "#" },
+  { name: "YouTube", icon: FaYoutube, href: "https://youtube.com/@inyensjoetom?si=VlDNwuiob3F8Pv9D" },
   { name: "Spotify", icon: FaSpotify, href: "#" },
   { name: "Apple Music", icon: FaApple, href: "#" },
 ];
