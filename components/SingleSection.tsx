@@ -108,9 +108,9 @@ export default function SingleSection() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               {details.map((d, i) => (
-                <FadeIn key={d.label} direction="right" delay={0.05 * i}>
+                <FadeIn key={d.label} direction="right" delay={0.05 * i} className="h-full">
                   <div
-                    className="card-hover glass rounded-xl p-4"
+                    className="card-hover glass rounded-xl p-4 h-full"
                     style={{ border: "1px solid rgba(212,175,55,0.1)" }}
                   >
                     <d.icon className="w-5 h-5 text-yellow-400 mb-2" aria-hidden="true" />
