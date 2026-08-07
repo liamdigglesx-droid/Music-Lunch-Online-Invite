@@ -9,7 +9,7 @@ const navLinks = [
 ];
 
 const socials: { name: string; icon: IconType; href: string }[] = [
-  { name: "Instagram", icon: FaInstagram, href: "#" },
+  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/princeinyeneobongnsubong?igsh=MTcxdnFtdHhieTY4dA==" },
   { name: "Facebook", icon: FaFacebookF, href: "#" },
   { name: "YouTube", icon: FaYoutube, href: "#" },
   { name: "Spotify", icon: FaSpotify, href: "#" },
