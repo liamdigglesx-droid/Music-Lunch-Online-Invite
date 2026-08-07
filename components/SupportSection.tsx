@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import FadeIn from "./FadeIn";
 import { Heart, Users, Briefcase, Music, Share2 } from "lucide-react";
 
@@ -15,6 +18,7 @@ const cards = [
       { label: "Account Number", value: "2089116861" },
     ],
     href: "",
+    isShare: false,
   },
   {
     icon: Users,
@@ -23,6 +27,7 @@ const cards = [
     action: "Partner With Us",
     detail: [],
     href: WHATSAPP_URL,
+    isShare: false,
   },
   {
     icon: Briefcase,
@@ -31,6 +36,7 @@ const cards = [
     action: "Become a Sponsor",
     detail: [],
     href: WHATSAPP_URL,
+    isShare: false,
   },
   {
     icon: Music,
@@ -38,7 +44,8 @@ const cards = [
     desc: "Help fund recording sessions, music videos, live events, and ministerial outreaches.",
     action: "Support",
     detail: [],
-    href: "",
+    href: WHATSAPP_URL,
+    isShare: false,
   },
   {
     icon: Share2,
@@ -47,10 +54,35 @@ const cards = [
     action: "Share Now",
     detail: [],
     href: "",
+    isShare: true,
   },
 ];
 
 export default function SupportSection() {
+  const [shareOpen, setShareOpen] = useState(false);
+
+  const shareText = "Check out this new worship release – NO DEMAND by Inyeneobong Nsubong!";
+
+  function getPageUrl() {
+    return typeof window !== "undefined" ? window.location.href : "";
+  }
+
+  function handleShare() {
+    if (typeof navigator !== "undefined" && navigator.share) {
+      navigator.share({ title: "NO DEMAND", text: shareText, url: getPageUrl() }).catch(() => {});
+    } else {
+      setShareOpen(true);
+    }
+  }
+
+  function handleCopyLink() {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(getPageUrl()).then(() => setShareOpen(false)).catch(() => setShareOpen(false));
+    } else {
+      setShareOpen(false);
+    }
+  }
+
   return (
     <section
       id="support"
@@ -122,7 +154,16 @@ export default function SupportSection() {
                   </div>
                 )}
 
-                {c.href ? (
+                {c.isShare ? (
+                  <button
+                    className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider"
+                    style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
+                    type="button"
+                    onClick={handleShare}
+                  >
+                    {c.action}
+                  </button>
+                ) : c.href ? (
                   <a
                     href={c.href}
                     target="_blank"
@@ -145,17 +186,45 @@ export default function SupportSection() {
             </FadeIn>
           ))}
         </div>
-
-        {/* Online donation link placeholder */}
-        <FadeIn delay={0.5} className="mt-10 text-center">
-          <p className="text-white/50 text-sm" style={{ fontFamily: "Lato, sans-serif" }}>
-            Online donation link:{" "}
-            <a href="#" className="text-yellow-400 hover:underline">
-              Placeholder – configure donation URL
-            </a>
-          </p>
-        </FadeIn>
       </div>
+
+      {/* Share dialog */}
+      {shareOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setShareOpen(false)}>
+          <div className="glass-dark rounded-2xl p-6 max-w-sm w-full mx-4" style={{ border: "1px solid rgba(212,175,55,0.3)" }} onClick={(e) => e.stopPropagation()}>
+            <h3 className="text-white font-bold text-lg mb-4 text-center" style={{ fontFamily: "Cinzel, serif" }}>Share This Release</h3>
+            <div className="grid grid-cols-3 gap-3">
+              <a href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">💬</span>
+                <span className="text-white/70 text-xs">WhatsApp</span>
+              </a>
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">👍</span>
+                <span className="text-white/70 text-xs">Facebook</span>
+              </a>
+              <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">✖️</span>
+                <span className="text-white/70 text-xs">X</span>
+              </a>
+              <a href={`https://t.me/share/url?url=${encodeURIComponent(getPageUrl())}&text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">✈️</span>
+                <span className="text-white/70 text-xs">Telegram</span>
+              </a>
+              <a href={`mailto:?subject=${encodeURIComponent("NO DEMAND – New Worship Release")}&body=${encodeURIComponent(shareText + "\n\n" + getPageUrl())}`} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">📧</span>
+                <span className="text-white/70 text-xs">Email</span>
+              </a>
+              <button onClick={handleCopyLink} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+                <span className="text-2xl">📋</span>
+                <span className="text-white/70 text-xs">Copy Link</span>
+              </button>
+            </div>
+            <button onClick={() => setShareOpen(false)} className="mt-4 w-full py-2 rounded-full text-sm text-white/60 hover:text-white transition-colors">
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

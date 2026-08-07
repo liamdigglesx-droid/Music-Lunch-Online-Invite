@@ -95,21 +95,18 @@ export default function EventSection() {
         {/* Map placeholder + CTA */}
         <FadeIn delay={0.3}>
           <div className="glass rounded-3xl overflow-hidden" style={{ border: "1px solid rgba(212,175,55,0.15)" }}>
-            {/* Map placeholder */}
-            <div
-              className="h-64 sm:h-80 flex items-center justify-center flex-col gap-4"
-              style={{
-                background: "linear-gradient(135deg, rgba(6,64,43,0.5), rgba(52,21,57,0.5))",
-              }}
-              role="img"
-              aria-label="Map placeholder for The Apostolic Church, 69 Oron Road, Uyo, Akwa Ibom State"
-            >
-              <MapPin className="w-12 h-12 text-yellow-400" aria-hidden="true" />
-              <div className="text-center">
-                <p className="text-white font-semibold">The Apostolic Church</p>
-                <p className="text-white/60 text-sm">69 Oron Road, Uyo, Akwa Ibom State</p>
-                <p className="text-white/40 text-xs mt-1">Google Map Placeholder</p>
-              </div>
+            {/* Google Map */}
+            <div className="h-64 sm:h-80">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d7.9326!3d5.0377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s69+Oron+Road%2C+Uyo%2C+Akwa+Ibom+State%2C+Nigeria!5e0!3m2!1sen!2sng!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="The Apostolic Church, 69 Oron Road, Uyo, Akwa Ibom State"
+              />
             </div>
             <div className="p-6 text-center">
               <a
