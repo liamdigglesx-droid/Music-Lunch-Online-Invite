@@ -61,14 +61,25 @@ const cards = [
 export default function SupportSection() {
   const [shareOpen, setShareOpen] = useState(false);
 
-  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
   const shareText = "Check out this new worship release – NO DEMAND by Inyeneobong Nsubong!";
+
+  function getPageUrl() {
+    return typeof window !== "undefined" ? window.location.href : "";
+  }
 
   function handleShare() {
     if (typeof navigator !== "undefined" && navigator.share) {
-      navigator.share({ title: "NO DEMAND", text: shareText, url: pageUrl }).catch(() => {});
+      navigator.share({ title: "NO DEMAND", text: shareText, url: getPageUrl() }).catch(() => {});
     } else {
       setShareOpen(true);
+    }
+  }
+
+  function handleCopyLink() {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(getPageUrl()).then(() => setShareOpen(false)).catch(() => setShareOpen(false));
+    } else {
+      setShareOpen(false);
     }
   }
 
@@ -183,27 +194,27 @@ export default function SupportSection() {
           <div className="glass-dark rounded-2xl p-6 max-w-sm w-full mx-4" style={{ border: "1px solid rgba(212,175,55,0.3)" }} onClick={(e) => e.stopPropagation()}>
             <h3 className="text-white font-bold text-lg mb-4 text-center" style={{ fontFamily: "Cinzel, serif" }}>Share This Release</h3>
             <div className="grid grid-cols-3 gap-3">
-              <a href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + pageUrl)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <a href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">💬</span>
                 <span className="text-white/70 text-xs">WhatsApp</span>
               </a>
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">👍</span>
                 <span className="text-white/70 text-xs">Facebook</span>
               </a>
-              <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">✖️</span>
                 <span className="text-white/70 text-xs">X</span>
               </a>
-              <a href={`https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <a href={`https://t.me/share/url?url=${encodeURIComponent(getPageUrl())}&text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">✈️</span>
                 <span className="text-white/70 text-xs">Telegram</span>
               </a>
-              <a href={`mailto:?subject=${encodeURIComponent("NO DEMAND – New Worship Release")}&body=${encodeURIComponent(shareText + "\n\n" + pageUrl)}`} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <a href={`mailto:?subject=${encodeURIComponent("NO DEMAND – New Worship Release")}&body=${encodeURIComponent(shareText + "\n\n" + getPageUrl())}`} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">📧</span>
                 <span className="text-white/70 text-xs">Email</span>
               </a>
-              <button onClick={() => { navigator.clipboard.writeText(pageUrl); setShareOpen(false); }} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
+              <button onClick={handleCopyLink} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
                 <span className="text-2xl">📋</span>
                 <span className="text-white/70 text-xs">Copy Link</span>
               </button>
