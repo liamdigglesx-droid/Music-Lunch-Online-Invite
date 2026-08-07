@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --dark-green: #06402B;
+  --dark-purple: #341539;
+  --soft-gold: #D4AF37;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dark-green: var(--dark-green);
+  --color-dark-purple: var(--dark-purple);
+  --color-soft-gold: var(--soft-gold);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0a0a0a;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #06402B 30%, #341539 70%, #0a0a0a 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(6, 64, 43, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Gold glow */
+.gold-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+/* Button ripple */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.btn-ripple:hover::after {
+  transform: scale(2);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #06402B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Waveform bars */
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* Floating particles */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px) rotate(360deg); opacity: 0; }
+}
+
+/* Light rays */
+@keyframes rays {
+  0% { opacity: 0; transform: rotate(0deg) scaleX(0.5); }
+  50% { opacity: 0.3; transform: rotate(5deg) scaleX(1); }
+  100% { opacity: 0; transform: rotate(10deg) scaleX(0.5); }
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212,175,55,0.3); }
+  50% { box-shadow: 0 0 40px rgba(212,175,55,0.6), 0 0 80px rgba(212,175,55,0.2); }
+}
