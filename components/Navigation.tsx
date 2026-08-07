@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Music } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -38,12 +38,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group" aria-label="NO DEMAND – Home">
-            <div
-              className="w-9 h-9 rounded-full flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #06402B, #341539)" }}
-            >
-              <Music className="w-5 h-5 text-yellow-400" aria-hidden="true" />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
+              alt="Logo"
+              className="w-9 h-9 rounded-full object-cover"
+            />
             <span
               className="font-bold text-sm tracking-widest text-white group-hover:text-yellow-400 transition-colors"
               style={{ fontFamily: "Cinzel, serif" }}
