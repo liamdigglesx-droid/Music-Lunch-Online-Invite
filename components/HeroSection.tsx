@@ -66,28 +66,12 @@ export default function HeroSection() {
                 className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden glass-dark"
                 style={{ border: "2px solid rgba(212,175,55,0.3)" }}
               >
-                <div
-                  className="w-full h-full flex items-center justify-center"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6,64,43,0.6), rgba(52,21,57,0.6))",
-                  }}
-                  role="img"
-                  aria-label="Placeholder for Inyeneobong Nsubong artist photo"
-                >
-                  <div className="text-center p-6">
-                    <div
-                      className="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center"
-                      style={{ background: "rgba(212,175,55,0.2)", border: "2px solid #D4AF37" }}
-                    >
-                      <span className="text-4xl" role="img" aria-label="Microphone">🎤</span>
-                    </div>
-                    <p className="text-yellow-400/70 text-sm tracking-widest uppercase">
-                      Artist Photo
-                    </p>
-                    <p className="text-white/50 text-xs mt-1">Inyeneobong Nsubong</p>
-                  </div>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
+                  alt="Inyeneobong Nsubong artist photo"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

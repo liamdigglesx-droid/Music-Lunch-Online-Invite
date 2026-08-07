@@ -8,9 +8,9 @@ const cards = [
     desc: "Your generous donation supports the production, promotion, and distribution of this anointed music ministry.",
     action: "Give Now",
     detail: [
-      { label: "Bank Name", value: "Placeholder Bank" },
-      { label: "Account Name", value: "Inyeneobong Nsubong Ministry" },
-      { label: "Account Number", value: "0000000000" },
+      { label: "Bank Name", value: "UBA" },
+      { label: "Account Name", value: "Inyeneobong Nsubong" },
+      { label: "Account Number", value: "2089116861" },
     ],
   },
   {
