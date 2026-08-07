@@ -3,13 +3,16 @@ import { useState } from "react";
 import FadeIn from "./FadeIn";
 import { X } from "lucide-react";
 
+const ARTIST_IMG = "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f";
+const LOGO_IMG = "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62";
+
 const items = [
-  { id: 1, label: "Artist Portrait", emoji: "👤", desc: "Official portrait" },
-  { id: 2, label: "Worship Session", emoji: "🙌", desc: "Live worship moment" },
-  { id: 3, label: "Live Ministry", emoji: "🎤", desc: "Ministry in action" },
-  { id: 4, label: "Behind the Scenes", emoji: "🎬", desc: "Recording session" },
-  { id: 5, label: "Single Artwork", emoji: "🎼", desc: "NO DEMAND artwork" },
-  { id: 6, label: "Artist Portrait 2", emoji: "✨", desc: "Studio portrait" },
+  { id: 1, label: "Artist Portrait", img: ARTIST_IMG, desc: "Official portrait" },
+  { id: 2, label: "Worship Session", img: ARTIST_IMG, desc: "Live worship moment" },
+  { id: 3, label: "Live Ministry", img: ARTIST_IMG, desc: "Ministry in action" },
+  { id: 4, label: "Behind the Scenes", img: ARTIST_IMG, desc: "Recording session" },
+  { id: 5, label: "Single Artwork", img: ARTIST_IMG, desc: "NO DEMAND artwork" },
+  { id: 6, label: "Artist Portrait 2", img: LOGO_IMG, desc: "Studio portrait" },
 ];
 
 export default function GallerySection() {
@@ -39,19 +42,17 @@ export default function GallerySection() {
           {items.map((item, i) => (
             <FadeIn key={item.id} delay={0.07 * i}>
               <button
-                className="card-hover glass rounded-2xl overflow-hidden aspect-square w-full flex items-center justify-center flex-col gap-3 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="card-hover glass rounded-2xl overflow-hidden aspect-square w-full relative cursor-pointer group focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 style={{
                   border: "1px solid rgba(212,175,55,0.1)",
-                  background: "linear-gradient(135deg, rgba(6,64,43,0.3), rgba(52,21,57,0.3))",
                 }}
                 onClick={() => setActive(item)}
                 aria-label={`Open lightbox: ${item.label}`}
                 type="button"
               >
-                <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                  {item.emoji}
-                </span>
-                <span className="text-white/60 text-xs tracking-wider" style={{ fontFamily: "Lato, sans-serif" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                <span className="absolute bottom-0 left-0 right-0 bg-black/50 text-white/80 text-xs tracking-wider py-2 text-center" style={{ fontFamily: "Lato, sans-serif" }}>
                   {item.label}
                 </span>
               </button>
@@ -79,18 +80,20 @@ export default function GallerySection() {
             <X className="w-8 h-8" />
           </button>
           <div
-            className="glass rounded-3xl p-12 flex flex-col items-center gap-4 max-w-sm w-full"
+            className="glass rounded-3xl overflow-hidden flex flex-col items-center max-w-lg w-full"
             style={{ border: "1px solid rgba(212,175,55,0.3)" }}
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="text-8xl">{active.emoji}</span>
-            <h3 className="text-white text-xl font-bold" style={{ fontFamily: "Cinzel, serif" }}>
-              {active.label}
-            </h3>
-            <p className="text-white/60 text-sm text-center" style={{ fontFamily: "Lato, sans-serif" }}>
-              {active.desc}
-            </p>
-            <p className="text-yellow-400/50 text-xs">Image placeholder – replace with actual photo</p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={active.img} alt={active.label} className="w-full aspect-square object-cover" />
+            <div className="p-6 text-center">
+              <h3 className="text-white text-xl font-bold" style={{ fontFamily: "Cinzel, serif" }}>
+                {active.label}
+              </h3>
+              <p className="text-white/60 text-sm mt-2" style={{ fontFamily: "Lato, sans-serif" }}>
+                {active.desc}
+              </p>
+            </div>
           </div>
         </div>
       )}

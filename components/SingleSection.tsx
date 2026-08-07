@@ -7,7 +7,7 @@ const details = [
   { icon: BookOpen, label: "Scriptural Inspiration", value: "Placeholder – e.g. Psalm 46:10" },
   { icon: Mic2, label: "Producer", value: "Placeholder – Producer Name" },
   { icon: Mic2, label: "Songwriter", value: "Inyeneobong Nsubong" },
-  { icon: Mic2, label: "Featured Artist", value: "Placeholder (if applicable)" },
+
   { icon: Calendar, label: "Release Date", value: "13th September 2026" },
 ];
 
@@ -46,33 +46,21 @@ export default function SingleSection() {
           {/* Artwork + story */}
           <div className="space-y-6">
             <FadeIn direction="left">
-              {/* Artwork placeholder */}
+              {/* Artwork */}
               <div
-                className="card-hover aspect-square rounded-3xl overflow-hidden glass-dark flex items-center justify-center flex-col gap-4"
+                className="card-hover aspect-square rounded-3xl overflow-hidden glass-dark"
                 style={{
                   border: "1px solid rgba(212,175,55,0.3)",
                   maxWidth: 380,
                   margin: "0 auto",
-                  background: "linear-gradient(135deg, rgba(6,64,43,0.4), rgba(52,21,57,0.4))",
                 }}
-                role="img"
-                aria-label="Placeholder for NO DEMAND single artwork"
               >
-                <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(212,175,55,0.15)", border: "2px solid rgba(212,175,55,0.4)" }}
-                >
-                  <span className="text-5xl">🎼</span>
-                </div>
-                <p className="text-yellow-400/70 text-sm tracking-widest uppercase">
-                  Single Artwork
-                </p>
-                <p
-                  className="text-white text-2xl font-black"
-                  style={{ fontFamily: "Cinzel, serif" }}
-                >
-                  NO DEMAND
-                </p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
+                  alt="NO DEMAND single artwork"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </FadeIn>
 

@@ -1,6 +1,8 @@
 import FadeIn from "./FadeIn";
 import { Heart, Users, Briefcase, Music, Share2 } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/2348068398878";
+
 const cards = [
   {
     icon: Heart,
@@ -12,6 +14,7 @@ const cards = [
       { label: "Account Name", value: "Inyeneobong Nsubong" },
       { label: "Account Number", value: "2089116861" },
     ],
+    href: "",
   },
   {
     icon: Users,
@@ -19,6 +22,7 @@ const cards = [
     desc: "Partner with us in a consistent, prayerful, and financial commitment to sustain the vision of this ministry.",
     action: "Partner With Us",
     detail: [],
+    href: WHATSAPP_URL,
   },
   {
     icon: Briefcase,
@@ -26,6 +30,7 @@ const cards = [
     desc: "Invest in future gospel music projects and become part of a legacy that touches nations.",
     action: "Become a Sponsor",
     detail: [],
+    href: WHATSAPP_URL,
   },
   {
     icon: Music,
@@ -33,6 +38,7 @@ const cards = [
     desc: "Help fund recording sessions, music videos, live events, and ministerial outreaches.",
     action: "Support",
     detail: [],
+    href: "",
   },
   {
     icon: Share2,
@@ -40,6 +46,7 @@ const cards = [
     desc: "The simplest act of sharing can carry this message of worship to someone who desperately needs it.",
     action: "Share Now",
     detail: [],
+    href: "",
   },
 ];
 
@@ -115,13 +122,25 @@ export default function SupportSection() {
                   </div>
                 )}
 
-                <button
-                  className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider"
-                  style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
-                  type="button"
-                >
-                  {c.action}
-                </button>
+                {c.href ? (
+                  <a
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider text-center block"
+                    style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
+                  >
+                    {c.action}
+                  </a>
+                ) : (
+                  <button
+                    className="btn-ripple mt-auto w-full py-2.5 rounded-full text-sm font-semibold text-black tracking-wider"
+                    style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)" }}
+                    type="button"
+                  >
+                    {c.action}
+                  </button>
+                )}
               </article>
             </FadeIn>
           ))}
