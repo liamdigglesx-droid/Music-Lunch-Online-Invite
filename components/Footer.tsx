@@ -1,4 +1,6 @@
 import { Music } from "lucide-react";
+import { FaInstagram, FaFacebookF, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
+import type { IconType } from "react-icons";
 
 const navLinks = [
   { label: "Privacy Policy", href: "#" },
@@ -6,12 +8,12 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-const socials = [
-  { name: "Instagram", emoji: "📸", href: "#" },
-  { name: "Facebook", emoji: "👍", href: "#" },
-  { name: "YouTube", emoji: "▶️", href: "#" },
-  { name: "Spotify", emoji: "🟢", href: "#" },
-  { name: "Apple Music", emoji: "🍎", href: "#" },
+const socials: { name: string; icon: IconType; href: string }[] = [
+  { name: "Instagram", icon: FaInstagram, href: "#" },
+  { name: "Facebook", icon: FaFacebookF, href: "#" },
+  { name: "YouTube", icon: FaYoutube, href: "#" },
+  { name: "Spotify", icon: FaSpotify, href: "#" },
+  { name: "Apple Music", icon: FaApple, href: "#" },
 ];
 
 export default function Footer() {
@@ -71,7 +73,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-xl hover:scale-110 transition-transform"
               >
-                {s.emoji}
+                <s.icon className="w-5 h-5 text-white/70 hover:text-yellow-400 transition-colors" />
               </a>
             ))}
           </div>

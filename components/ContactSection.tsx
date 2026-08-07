@@ -1,5 +1,9 @@
 import FadeIn from "./FadeIn";
 import { Mail, Phone, User } from "lucide-react";
+import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube, FaSpotify, FaApple, FaMusic } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiAudiomack } from "react-icons/si";
+import type { IconType } from "react-icons";
 
 const contacts = [
   { icon: Mail, label: "Booking Email", value: "booking@placeholder.com", href: "mailto:booking@placeholder.com" },
@@ -8,16 +12,16 @@ const contacts = [
   { icon: User, label: "Management Contact", value: "management@placeholder.com", href: "mailto:management@placeholder.com" },
 ];
 
-const socials = [
-  { name: "Instagram", emoji: "📸", href: "#", label: "Follow on Instagram" },
-  { name: "Facebook", emoji: "👍", href: "#", label: "Follow on Facebook" },
-  { name: "TikTok", emoji: "🎵", href: "#", label: "Follow on TikTok" },
-  { name: "YouTube", emoji: "▶️", href: "#", label: "Subscribe on YouTube" },
-  { name: "X", emoji: "✖️", href: "#", label: "Follow on X" },
-  { name: "Spotify", emoji: "🟢", href: "#", label: "Follow on Spotify" },
-  { name: "Apple Music", emoji: "🍎", href: "#", label: "Listen on Apple Music" },
-  { name: "Boomplay", emoji: "🎶", href: "#", label: "Follow on Boomplay" },
-  { name: "Audiomack", emoji: "🎧", href: "#", label: "Follow on Audiomack" },
+const socials: { name: string; icon: IconType; href: string; label: string }[] = [
+  { name: "Instagram", icon: FaInstagram, href: "#", label: "Follow on Instagram" },
+  { name: "Facebook", icon: FaFacebookF, href: "#", label: "Follow on Facebook" },
+  { name: "TikTok", icon: FaTiktok, href: "#", label: "Follow on TikTok" },
+  { name: "YouTube", icon: FaYoutube, href: "#", label: "Subscribe on YouTube" },
+  { name: "X", icon: FaXTwitter, href: "#", label: "Follow on X" },
+  { name: "Spotify", icon: FaSpotify, href: "#", label: "Follow on Spotify" },
+  { name: "Apple Music", icon: FaApple, href: "#", label: "Listen on Apple Music" },
+  { name: "Boomplay", icon: FaMusic, href: "#", label: "Follow on Boomplay" },
+  { name: "Audiomack", icon: SiAudiomack, href: "#", label: "Follow on Audiomack" },
 ];
 
 export default function ContactSection() {
@@ -95,7 +99,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="text-2xl group-hover:scale-110 transition-transform">{s.emoji}</span>
+                  <s.icon className="w-6 h-6 text-white/70 group-hover:scale-110 group-hover:text-yellow-400 transition-all" />
                   <span className="text-white/50 text-[9px] group-hover:text-yellow-400 transition-colors" style={{ fontFamily: "Lato, sans-serif" }}>
                     {s.name}
                   </span>
