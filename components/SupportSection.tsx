@@ -3,6 +3,9 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
 import { Heart, Users, Briefcase, Music, Share2 } from "lucide-react";
+import { FaWhatsapp, FaFacebookF, FaTelegramPlane } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineMail, HiOutlineClipboardCopy } from "react-icons/hi";
 
 const WHATSAPP_URL = "https://wa.me/2348068398878";
 
@@ -195,27 +198,27 @@ export default function SupportSection() {
             <h3 className="text-white font-bold text-lg mb-4 text-center" style={{ fontFamily: "Cinzel, serif" }}>Share This Release</h3>
             <div className="grid grid-cols-3 gap-3">
               <a href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">💬</span>
+                <FaWhatsapp className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">WhatsApp</span>
               </a>
               <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">👍</span>
+                <FaFacebookF className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">Facebook</span>
               </a>
               <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(getPageUrl())}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">✖️</span>
+                <FaXTwitter className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">X</span>
               </a>
               <a href={`https://t.me/share/url?url=${encodeURIComponent(getPageUrl())}&text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">✈️</span>
+                <FaTelegramPlane className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">Telegram</span>
               </a>
               <a href={`mailto:?subject=${encodeURIComponent("NO DEMAND – New Worship Release")}&body=${encodeURIComponent(shareText + "\n\n" + getPageUrl())}`} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">📧</span>
+                <HiOutlineMail className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">Email</span>
               </a>
               <button onClick={handleCopyLink} className="flex flex-col items-center gap-1 p-3 rounded-xl glass hover:bg-white/10 transition-colors">
-                <span className="text-2xl">📋</span>
+                <HiOutlineClipboardCopy className="w-6 h-6 text-white/70" />
                 <span className="text-white/70 text-xs">Copy Link</span>
               </button>
             </div>

@@ -1,14 +1,17 @@
 import FadeIn from "./FadeIn";
+import { FaSpotify, FaApple, FaYoutube, FaAmazon, FaDeezer, FaMusic } from "react-icons/fa";
+import { SiAudiomack, SiTidal } from "react-icons/si";
+import type { IconType } from "react-icons";
 
-const platforms = [
-  { name: "Spotify", emoji: "🟢", color: "#1DB954" },
-  { name: "Apple Music", emoji: "🍎", color: "#FC3C44" },
-  { name: "YouTube Music", emoji: "▶️", color: "#FF0000" },
-  { name: "Boomplay", emoji: "🎵", color: "#FF6600" },
-  { name: "Audiomack", emoji: "🎶", color: "#FFA500" },
-  { name: "Amazon Music", emoji: "🛒", color: "#00A8E1" },
-  { name: "Deezer", emoji: "🎧", color: "#A238FF" },
-  { name: "TIDAL", emoji: "🌊", color: "#00FFFF" },
+const platforms: { name: string; icon: IconType; color: string }[] = [
+  { name: "Spotify", icon: FaSpotify, color: "#1DB954" },
+  { name: "Apple Music", icon: FaApple, color: "#FC3C44" },
+  { name: "YouTube Music", icon: FaYoutube, color: "#FF0000" },
+  { name: "Boomplay", icon: FaMusic, color: "#FF6600" },
+  { name: "Audiomack", icon: SiAudiomack, color: "#FFA500" },
+  { name: "Amazon Music", icon: FaAmazon, color: "#00A8E1" },
+  { name: "Deezer", icon: FaDeezer, color: "#A238FF" },
+  { name: "TIDAL", icon: SiTidal, color: "#00FFFF" },
 ];
 
 export default function StreamingSection() {
@@ -47,7 +50,7 @@ export default function StreamingSection() {
                 className="card-hover glass rounded-2xl p-5 flex flex-col items-center gap-3"
                 style={{ border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <span className="text-4xl" role="img" aria-label={p.name}>{p.emoji}</span>
+                <p.icon className="w-10 h-10" style={{ color: p.color }} aria-label={p.name} />
                 <span
                   className="text-white text-xs font-semibold tracking-wider"
                   style={{ fontFamily: "Lato, sans-serif", color: p.color }}
