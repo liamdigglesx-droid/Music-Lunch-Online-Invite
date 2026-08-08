@@ -25,7 +25,7 @@ export default function Particles() {
       wobble: number;
     }> = [];
 
-    const colors = ["#D4AF37", "#06402B", "#ffffff", "#341539"];
+    const colors = ["#F1C95A", "#2FA772", "#FFFFFF", "#8B4AA8"];
 
     function resize() {
       if (!canvas) return;
@@ -66,7 +66,7 @@ export default function Particles() {
     function spawn() {
       if (!canvas) return;
       particles.length = 0;
-      for (let i = 0; i < 42; i++) {
+      for (let i = 0; i < 46; i++) {
        particles.push(createParticle());
       }
     }

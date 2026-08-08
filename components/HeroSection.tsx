@@ -75,14 +75,14 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
-          className="absolute left-[6%] top-[16%] h-56 w-56 rounded-full border border-yellow-400/15"
+          className="absolute left-[6%] top-[16%] hidden h-56 w-56 rounded-full border border-yellow-400/15 md:block"
           style={{
             background:
               "repeating-radial-gradient(circle at center, rgba(212,175,55,0.1) 0 2px, transparent 2px 12px)",
           }}
         />
         <div
-          className="absolute right-[6%] top-[24%] w-[22rem] max-w-[45vw] rounded-[2rem] border border-white/8 bg-black/10 p-8 backdrop-blur-[2px]"
+          className="absolute right-[6%] top-[24%] hidden w-[22rem] max-w-[45vw] rounded-[2rem] border border-white/8 bg-black/10 p-8 backdrop-blur-[2px] lg:block"
           style={{ transform: "rotate(-8deg)" }}
         >
           <div className="space-y-5 opacity-80">
