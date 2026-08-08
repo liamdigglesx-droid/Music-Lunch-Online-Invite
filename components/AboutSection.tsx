@@ -1,10 +1,11 @@
 import FadeIn from "./FadeIn";
 
 const highlights = [
-  "Anointed minister of the gospel",
-  "Worship leader and recording artist",
-  "Music evangelist across West Africa",
-  "Founder of Worship Expression Ministry",
+  "Choir member since 1992 — Children's Choir (Band of Hope)",
+  "Member, Power of Grace Acapella Group (SS2)",
+  "Precursor, pioneering team of GPrS CREW gospel Acapella ministry",
+  "Tenor singer, Assembly Choir — The Apostolic Church Nigeria, Uyo (2021–present)",
+  "Partner, Akwa Ibom ARISE Gospel Music",
 ];
 
 export default function AboutSection() {
@@ -57,18 +58,19 @@ export default function AboutSection() {
           <FadeIn direction="right" delay={0.2}>
             <div className="space-y-6">
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                Inyeneobong Nsubong is a passionate gospel minister, worship leader, and recording
-                artist whose music carries the authentic fragrance of the presence of God. Born with a
-                gift that transcends musical talent, she has devoted her life and voice to the service
-                of the Most High.
+                Inyeneobong Nsubong is a passionate Gospel music minister, dedicated tenor vocalist, songwriter, and worshipper whose musical journey has been marked by consistency, growth, and unwavering commitment to the service of God through music.
               </p>
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                Her musical journey began in the local church choir and has grown into a full-time
-                ministry of worship evangelism. Deeply rooted in the Word, her songs are not merely
-                performances but encounters — altars built with sound, where people meet with God.
+                His musical engagement began in 1992 as a member of the Children&apos;s Choir (Band of Hope), where his passion for worship first blossomed. He later progressed to the Sunday School Choir, distinguishing himself as an outstanding tenor singer with a remarkable blend of vocal excellence and spiritual sensitivity.
               </p>
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                Her mission is simple but profound: <em className="text-yellow-400">"To build a bridge between heaven and earth through the vehicle of worship music, so that every soul that encounters these songs finds rest, healing, and transformation in God&apos;s presence."</em>
+                While in Senior Secondary School Two (SS2), he became a member of the renowned Power of Grace Acapella Group. He subsequently became the Precursor of the pioneering team of the highly reputable GPrS CREW — a dynamic gospel music Acapella ministry known for impactful ministrations at weddings, child dedications, traditional marriages, burial ceremonies, church services, and numerous other Christian gatherings.
+              </p>
+              <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
+                In 2021, Inyeneobong Nsubong joined the Assembly Choir of The Apostolic Church Nigeria, 69 Oron Road, Uyo, where he continues to serve faithfully as a tenor singer. He is proudly in partnership with Akwa Ibom ARISE Gospel Music, an initiative championed by Dr. Ekerete Jackson BoEkom and supported by His Excellency, Pastor Umo Bassey Eno, PhD, the Executive Producer.
+              </p>
+              <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
+                Today, Inyeneobong Nsubong stands as a symbol of excellence, humility, consistency, and unwavering devotion to the Kingdom of God. His life and ministry reflect the truth that <em className="text-yellow-400">genuine worship is not merely performed — it is lived.</em>
               </p>
 
               {/* Highlights */}
@@ -84,16 +86,6 @@ export default function AboutSection() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* Musical style */}
-              <div className="glass rounded-xl p-4 mt-4">
-                <h3 className="text-yellow-400 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: "Lato, sans-serif" }}>
-                  Musical Style
-                </h3>
-                <p className="text-white/70 text-sm" style={{ fontFamily: "Lato, sans-serif" }}>
-                  Contemporary gospel · Afro-worship · Prophetic praise · Soul-led devotion
-                </p>
               </div>
             </div>
           </FadeIn>
