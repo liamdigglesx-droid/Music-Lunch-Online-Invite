@@ -37,7 +37,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group" aria-label="I. Nsubong Music – Home">
+          <a href="#home" className="flex items-center gap-2 group" aria-label="Inyeneobong Nsubong Music – Home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
@@ -48,7 +48,7 @@ export default function Navigation() {
               className="font-bold text-sm tracking-widest text-white group-hover:text-yellow-400 transition-colors"
               style={{ fontFamily: "Cinzel, serif" }}
             >
-              I. Nsubong Music
+              Inyeneobong Nsubong Music
             </span>
           </a>
 

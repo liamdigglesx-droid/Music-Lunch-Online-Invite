@@ -7,7 +7,7 @@ const details = [
   { icon: BookOpen, label: "Scriptural Inspiration", value: "Romans 5:8" },
   { icon: Mic2, label: "Arranger", value: "JephMUSIC" },
   { icon: Mic2, label: "Producer", value: "Mr. Dehniece" },
-  { icon: Mic2, label: "Executive Producer", value: "His Excellency Pastor Umoh Bassey Eno (Ph.D)" },
+  { icon: Mic2, label: "Executive Producer", value: "His Excellency Pastor Umo Bassey Eno (Ph.D)" },
   { icon: Mic2, label: "Progenitor of AKAGOM", value: "Ekerete Jackson BoEKOM" },
   { icon: Mic2, label: "Songwriter", value: "Inyeneobong Nsubong" },
   { icon: Calendar, label: "Release Date", value: "13th September 2026" },
