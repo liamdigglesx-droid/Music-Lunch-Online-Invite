@@ -233,7 +233,7 @@ export default function HeroSection() {
                 href="#support"
                 className="btn-ripple inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white tracking-wider border border-yellow-400/50 hover:bg-yellow-400/10 transition-all hover:scale-105"
               >
-                Support
+                Support Financially
               </a>
               <a
                 href="https://maps.google.com/?q=69+Oron+Road,+Uyo,+Akwa+Ibom+State,+Nigeria"
