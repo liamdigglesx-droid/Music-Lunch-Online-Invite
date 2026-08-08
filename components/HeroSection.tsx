@@ -230,6 +230,12 @@ export default function HeroSection() {
                 Add to Calendar
               </a>
               <a
+                href="#support"
+                className="btn-ripple inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white tracking-wider border border-yellow-400/50 hover:bg-yellow-400/10 transition-all hover:scale-105"
+              >
+                Support
+              </a>
+              <a
                 href="https://maps.google.com/?q=69+Oron+Road,+Uyo,+Akwa+Ibom+State,+Nigeria"
                 target="_blank"
                 rel="noopener noreferrer"

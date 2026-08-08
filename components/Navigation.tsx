@@ -36,20 +36,22 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group" aria-label="Inyeneobong Nsubong Music – Home">
+          {/* Logo – new INM brand mark on the left */}
+          <a href="#home" className="flex items-center gap-3 group" aria-label="Inyeneobong Nsubong Music – Home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://github.com/user-attachments/assets/6746ee29-699c-4c73-aae1-43bc378c3c1a"
+              alt="Inyeneobong Nsubong Music logo"
+              className="h-10 w-auto object-contain"
+            />
+            {/* Artist photo moved to right side of the logo link */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
-              alt="Logo"
-              className="w-9 h-9 rounded-full object-cover"
+              alt=""
+              aria-hidden="true"
+              className="w-8 h-8 rounded-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
             />
-            <span
-              className="font-bold text-sm tracking-widest text-white group-hover:text-yellow-400 transition-colors"
-              style={{ fontFamily: "Cinzel, serif" }}
-            >
-              Inyeneobong Nsubong Music
-            </span>
           </a>
 
           {/* Desktop links */}
