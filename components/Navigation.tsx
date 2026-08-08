@@ -41,7 +41,7 @@ export default function Navigation() {
             <img
               src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
               alt="Akwa Ibom Arise Gospel Music logo"
-              className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+              className="h-10 w-10 rounded-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
             />
             <span
               className="text-white text-sm sm:text-base font-semibold tracking-wide"
