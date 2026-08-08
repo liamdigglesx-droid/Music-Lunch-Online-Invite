@@ -45,7 +45,7 @@ export default function AboutSection() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
+                  src="https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682"
                   alt="Inyeneobong Nsubong portrait"
                   className="w-full h-full object-cover"
                 />
