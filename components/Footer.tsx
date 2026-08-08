@@ -11,7 +11,7 @@ const navLinks = [
 const socials: { name: string; icon: IconType; href: string }[] = [
   { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/princeinyeneobongnsubong?igsh=MTcxdnFtdHhieTY4dA==" },
   { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@richjtom?_r=1&_t=ZS-98gfkgwfFeG" },
-  { name: "Facebook", icon: FaFacebookF, href: "#" },
+  { name: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/share/1ZCJ6n9kyT/" },
   { name: "YouTube", icon: FaYoutube, href: "https://youtube.com/@inyensjoetom?si=VlDNwuiob3F8Pv9D" },
   { name: "Spotify", icon: FaSpotify, href: "#" },
   { name: "Apple Music", icon: FaApple, href: "#" },

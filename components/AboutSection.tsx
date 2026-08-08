@@ -64,13 +64,22 @@ export default function AboutSection() {
                 His musical engagement began in 1992 as a member of the Children&apos;s Choir (Band of Hope), where his passion for worship first blossomed. He later progressed to the Sunday School Choir, distinguishing himself as an outstanding tenor singer with a remarkable blend of vocal excellence and spiritual sensitivity.
               </p>
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                While in Senior Secondary School Two (SS2), he became a member of the renowned Power of Grace Acapella Group. He subsequently became the Precursor of the pioneering team of the highly reputable GPrS CREW — a dynamic gospel music Acapella ministry known for impactful ministrations at weddings, child dedications, traditional marriages, burial ceremonies, church services, and numerous other Christian gatherings.
+                During his secondary education at Holy Family College, Oku Abak, Abak Local Government Area, being a boarding student limited his availability during school sessions. Nevertheless, his commitment to the ministry of music remained steadfast, as he actively participated in choir activities whenever he returned home on holidays.
               </p>
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                In 2021, Inyeneobong Nsubong joined the Assembly Choir of The Apostolic Church Nigeria, 69 Oron Road, Uyo, where he continues to serve faithfully as a tenor singer. He is proudly in partnership with Akwa Ibom ARISE Gospel Music, an initiative championed by Dr. Ekerete Jackson BoEkom and supported by His Excellency, Pastor Umo Bassey Eno, PhD, the Executive Producer.
+                While in Senior Secondary School Two (SS2), he became a member of the renowned Power of Grace Acapella Group, where his vocal dexterity and stage confidence were further refined. He subsequently became the Precursor of the pioneering team of the highly reputable GPrS CREW — a dynamic gospel music Acapella ministry known for impactful ministrations at weddings, child dedications, traditional marriages, burial ceremonies, church services, and numerous other Christian gatherings. Through these platforms, he has touched countless lives with songs of hope, worship, and encouragement.
               </p>
               <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
-                Today, Inyeneobong Nsubong stands as a symbol of excellence, humility, consistency, and unwavering devotion to the Kingdom of God. His life and ministry reflect the truth that <em className="text-yellow-400">genuine worship is not merely performed — it is lived.</em>
+                Beyond music, Inyeneobong Nsubong is academically accomplished. He obtained a Higher National Diploma (HND) in Electrical/Electronic Engineering from Heritage Polytechnic, Ikot Udota, Eket Local Government Area, Akwa Ibom State. His academic background reflects his commitment to excellence, discipline, and continuous personal development, qualities that are evident in both his professional and ministerial life.
+              </p>
+              <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
+                In 2021, Inyeneobong Nsubong joined the Assembly Choir (Main Choir) of The Apostolic Church Nigeria, 69 Oron Road, Uyo, where he continues to serve faithfully as a tenor singer. His dedication, discipline, musical excellence, and spirit of teamwork have contributed immensely to the growth and effectiveness of the choir, all to the glory of God.
+              </p>
+              <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
+                Beyond congregational ministry, Inyeneobong Nsubong has continued to establish himself as an emerging gospel music brand with a clear mandate to proclaim the Gospel through inspired music. He is proudly in partnership with Akwa Ibom ARISE Gospel Music, an initiative championed by Dr. Ekerete Jackson BoEkom as its progenitor and supported by the visionary leadership of His Excellency, Pastor Umo Bassey Eno, PhD, the Executive Producer.
+              </p>
+              <p className="text-white/80 leading-relaxed" style={{ fontFamily: "Lato, sans-serif" }}>
+                Today, Inyeneobong Nsubong stands as a symbol of excellence, humility, consistency, and unwavering devotion to the Kingdom of God. His life and ministry reflect the truth that <em className="text-yellow-400">genuine worship is not merely performed — it is lived.</em> Through his rich tenor voice, inspiring compositions, and Christ-centered ministry, he continues to bless lives, strengthen the Church, and draw many into a deeper experience of God&apos;s presence.
               </p>
 
               {/* Highlights */}
