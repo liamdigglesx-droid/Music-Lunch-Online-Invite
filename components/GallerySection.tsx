@@ -3,16 +3,33 @@ import { useState } from "react";
 import FadeIn from "./FadeIn";
 import { X } from "lucide-react";
 
-const ARTIST_IMG = "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f";
-const LOGO_IMG = "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62";
-
 const items = [
-  { id: 1, label: "Artist Portrait", img: ARTIST_IMG, desc: "Official portrait" },
-  { id: 2, label: "Worship Session", img: ARTIST_IMG, desc: "Live worship moment" },
-  { id: 3, label: "Live Ministry", img: ARTIST_IMG, desc: "Ministry in action" },
-  { id: 4, label: "Behind the Scenes", img: ARTIST_IMG, desc: "Recording session" },
-  { id: 5, label: "Single Artwork", img: ARTIST_IMG, desc: "NO DEMAND artwork" },
-  { id: 6, label: "Artist Portrait 2", img: LOGO_IMG, desc: "Studio portrait" },
+  { id: 1, img: "https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682", alt: "Artist portrait 1" },
+  { id: 2, img: "https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb", alt: "Artist portrait 2" },
+  { id: 3, img: "https://github.com/user-attachments/assets/2cffc798-0f7a-44fe-ba2b-1cf85433691f", alt: "Live performance 1" },
+  { id: 4, img: "https://github.com/user-attachments/assets/a8a3941c-38b4-4527-a550-8e3604e3ebc9", alt: "Live performance 2" },
+  { id: 5, img: "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f", alt: "Gallery image 5" },
+  { id: 6, img: "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62", alt: "Gallery image 6" },
+  { id: 7, img: "https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682", alt: "Gallery image 7" },
+  { id: 8, img: "https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb", alt: "Gallery image 8" },
+  { id: 9, img: "https://github.com/user-attachments/assets/2cffc798-0f7a-44fe-ba2b-1cf85433691f", alt: "Gallery image 9" },
+  { id: 10, img: "https://github.com/user-attachments/assets/a8a3941c-38b4-4527-a550-8e3604e3ebc9", alt: "Gallery image 10" },
+  { id: 11, img: "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f", alt: "Gallery image 11" },
+  { id: 12, img: "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62", alt: "Gallery image 12" },
+  { id: 13, img: "https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682", alt: "Gallery image 13" },
+  { id: 14, img: "https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb", alt: "Gallery image 14" },
+  { id: 15, img: "https://github.com/user-attachments/assets/2cffc798-0f7a-44fe-ba2b-1cf85433691f", alt: "Gallery image 15" },
+  { id: 16, img: "https://github.com/user-attachments/assets/a8a3941c-38b4-4527-a550-8e3604e3ebc9", alt: "Gallery image 16" },
+  { id: 17, img: "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f", alt: "Gallery image 17" },
+  { id: 18, img: "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62", alt: "Gallery image 18" },
+  { id: 19, img: "https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682", alt: "Gallery image 19" },
+  { id: 20, img: "https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb", alt: "Gallery image 20" },
+  { id: 21, img: "https://github.com/user-attachments/assets/2cffc798-0f7a-44fe-ba2b-1cf85433691f", alt: "Gallery image 21" },
+  { id: 22, img: "https://github.com/user-attachments/assets/a8a3941c-38b4-4527-a550-8e3604e3ebc9", alt: "Gallery image 22" },
+  { id: 23, img: "https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f", alt: "Gallery image 23" },
+  { id: 24, img: "https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62", alt: "Gallery image 24" },
+  { id: 25, img: "https://github.com/user-attachments/assets/01531b54-b201-429e-b377-c48e50833682", alt: "Gallery image 25" },
+  { id: 26, img: "https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb", alt: "Gallery image 26" },
 ];
 
 export default function GallerySection() {
@@ -47,14 +64,11 @@ export default function GallerySection() {
                   border: "1px solid rgba(212,175,55,0.1)",
                 }}
                 onClick={() => setActive(item)}
-                aria-label={`Open lightbox: ${item.label}`}
+                aria-label={`Open lightbox: ${item.alt}`}
                 type="button"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-                <span className="absolute bottom-0 left-0 right-0 bg-black/50 text-white/80 text-xs tracking-wider py-2 text-center" style={{ fontFamily: "Lato, sans-serif" }}>
-                  {item.label}
-                </span>
+                <img src={item.img} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               </button>
             </FadeIn>
           ))}
@@ -69,7 +83,7 @@ export default function GallerySection() {
           onClick={() => setActive(null)}
           role="dialog"
           aria-modal="true"
-          aria-label={`Lightbox: ${active.label}`}
+          aria-label="Lightbox"
         >
           <button
             className="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors"
@@ -85,15 +99,7 @@ export default function GallerySection() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={active.img} alt={active.label} className="w-full aspect-square object-cover" />
-            <div className="p-6 text-center">
-              <h3 className="text-white text-xl font-bold" style={{ fontFamily: "Cinzel, serif" }}>
-                {active.label}
-              </h3>
-              <p className="text-white/60 text-sm mt-2" style={{ fontFamily: "Lato, sans-serif" }}>
-                {active.desc}
-              </p>
-            </div>
+            <img src={active.img} alt={active.alt} className="w-full aspect-square object-cover" />
           </div>
         </div>
       )}
