@@ -36,28 +36,19 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo – new INM brand mark on the left */}
-          <a href="#home" className="flex items-center gap-3 group" aria-label="Inyeneobong Nsubong Music – Home">
+          <a href="#home" className="flex items-center gap-3 group" aria-label="Akwa Ibom Arise Gospel Music – Home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://github.com/user-attachments/assets/6746ee29-699c-4c73-aae1-43bc378c3c1a"
-              alt="Inyeneobong Nsubong Music logo"
-              className="h-10 w-auto object-contain"
+              src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
+              alt="Akwa Ibom Arise Gospel Music logo"
+              className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
             />
             <span
               className="text-white text-sm sm:text-base font-semibold tracking-wide"
               style={{ fontFamily: "Lato, sans-serif" }}
             >
-              Inyeneobong Nsubong Music
+              AKWA IBOM ARISE GOSPEL MUSIC
             </span>
-            {/* Artist photo moved to right side of the logo link */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://github.com/user-attachments/assets/564c9346-6e5a-4073-bcf3-1e142b271a62"
-              alt=""
-              aria-hidden="true"
-              className="w-8 h-8 rounded-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-            />
           </a>
 
           {/* Desktop links */}
