@@ -44,6 +44,12 @@ export default function Navigation() {
               alt="Inyeneobong Nsubong Music logo"
               className="h-10 w-auto object-contain"
             />
+            <span
+              className="text-white text-sm sm:text-base font-semibold tracking-wide"
+              style={{ fontFamily: "Lato, sans-serif" }}
+            >
+              Inyeneobong Nsubong Music
+            </span>
             {/* Artist photo moved to right side of the logo link */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
