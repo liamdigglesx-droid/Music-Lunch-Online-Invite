@@ -12,32 +12,94 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background gradient */}
+      {/* Background composition */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(6,64,43,0.8) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(52,21,57,0.8) 0%, transparent 60%), linear-gradient(to bottom, #0a0a0a, #0d1a15, #0a0a0a)",
+            "radial-gradient(circle at 16% 22%, rgba(212,175,55,0.18), transparent 22%), radial-gradient(circle at 82% 20%, rgba(120,54,123,0.18), transparent 24%), radial-gradient(circle at 30% 78%, rgba(7,95,64,0.2), transparent 28%), linear-gradient(135deg, #070707 0%, #0d1713 36%, #101a24 66%, #090909 100%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Light rays */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background:
+            "repeating-linear-gradient(115deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 90px), repeating-linear-gradient(0deg, rgba(212,175,55,0.04) 0 1px, transparent 1px 72px)",
+          maskImage: "linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 92%)",
+        }}
+        aria-hidden="true"
+      />
+
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {[...Array(5)].map((_, i) => (
+        <div
+          className="absolute -left-24 top-20 h-72 w-72 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(212,175,55,0.25), transparent 70%)" }}
+        />
+        <div
+          className="absolute right-[8%] top-[14%] h-80 w-80 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(88,34,102,0.28), transparent 72%)" }}
+        />
+        <div
+          className="absolute left-[42%] bottom-[-7rem] h-96 w-96 -translate-x-1/2 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(7,95,64,0.34), transparent 72%)" }}
+        />
+      </div>
+
+      {/* Stage beams */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {[
+          { left: "18%", rotate: -24, delay: "0s" },
+          { left: "30%", rotate: -10, delay: "0.5s" },
+          { left: "72%", rotate: 14, delay: "0.2s" },
+          { left: "84%", rotate: 28, delay: "0.7s" },
+        ].map((beam, i) => (
           <div
             key={i}
             className="absolute top-0 left-1/2 origin-top"
             style={{
-              width: "2px",
-              height: "60vh",
+              left: beam.left,
+              width: "140px",
+              height: "72vh",
               background:
-                "linear-gradient(to bottom, rgba(212,175,55,0.4), transparent)",
-              transform: `rotate(${-30 + i * 15}deg)`,
-              animation: `rays ${3 + i * 0.5}s ease-in-out ${i * 0.4}s infinite alternate`,
+                "linear-gradient(to bottom, rgba(255,245,212,0.16), rgba(212,175,55,0.04) 40%, transparent 80%)",
+              clipPath: "polygon(48% 0%, 52% 0%, 100% 100%, 0% 100%)",
+              filter: "blur(2px)",
+              transform: `rotate(${beam.rotate}deg)`,
+              animation: `rays ${4 + i * 0.4}s ease-in-out ${beam.delay} infinite alternate`,
             }}
           />
         ))}
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute left-[6%] top-[16%] hidden h-56 w-56 rounded-full border border-yellow-400/15 md:block"
+          style={{
+            background:
+              "repeating-radial-gradient(circle at center, rgba(212,175,55,0.1) 0 2px, transparent 2px 12px)",
+          }}
+        />
+        <div
+          className="absolute right-[6%] top-[24%] hidden w-[22rem] max-w-[45vw] rounded-[2rem] border border-white/8 bg-black/10 p-8 backdrop-blur-[2px] lg:block"
+          style={{ transform: "rotate(-8deg)" }}
+        >
+          <div className="space-y-5 opacity-80">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="relative h-px bg-white/12">
+                <span
+                  className="absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-yellow-400/70"
+                  style={{ left: `${18 + i * 13}%` }}
+                />
+                <span
+                  className="absolute top-1/2 h-6 w-px -translate-y-1/2 bg-white/35"
+                  style={{ left: `${18 + i * 13 + 2}%` }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Particles */}
@@ -54,6 +116,15 @@ export default function HeroSection() {
           >
             <div className="relative">
               <div
+                className="absolute -inset-10 rounded-full opacity-50"
+                style={{
+                  background:
+                    "repeating-radial-gradient(circle, rgba(255,255,255,0.08) 0 2px, transparent 2px 20px)",
+                  transform: "rotate(-14deg)",
+                }}
+                aria-hidden="true"
+              />
+              <div
                 className="absolute -inset-4 rounded-3xl blur-2xl opacity-40"
                 style={{
                   background:
@@ -63,9 +134,17 @@ export default function HeroSection() {
                 aria-hidden="true"
               />
               <div
-                className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden glass-dark"
+                className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden glass-dark shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
                 style={{ border: "2px solid rgba(212,175,55,0.3)" }}
               >
+                <div
+                  className="absolute inset-0 z-10"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(255,255,255,0.08), transparent 24%, transparent 70%, rgba(0,0,0,0.28))",
+                  }}
+                  aria-hidden="true"
+                />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
