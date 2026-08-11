@@ -63,7 +63,7 @@ export default function SingleSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://github.com/user-attachments/assets/298fe4b9-ac40-4f0a-b551-7e93ae9505bb"
-                  alt="NO NEMANDS single artwork"
+                  alt="NO DEMANDS single artwork"
                   className="w-full h-full object-cover"
                 />
               </div>
