@@ -147,7 +147,7 @@ export default function HeroSection() {
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://github.com/user-attachments/assets/bc40e062-6c96-4d43-8c8e-7cf2275d930f"
+                  src="https://github.com/user-attachments/assets/57ea6c56-fabd-452f-af14-c6045bd13d7a"
                   alt="Inyeneobong Nsubong artist photo"
                   className="w-full h-full object-cover"
                 />
@@ -222,7 +222,7 @@ export default function HeroSection() {
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
-                href="https://calendar.google.com/calendar/r/eventedit?text=NO+DEMAND+Single+Launch&dates=20260913T093000Z/20260913T143000Z&details=Official+Single+Launch+by+Inyeneobong+Nsubong&location=The+Apostolic+Church,+69+Oron+Road,+Uyo,+Akwa+Ibom+State"
+                href="https://calendar.google.com/calendar/r/eventedit?text=NO+DEMANDS+Single+Launch&dates=20260913T093000Z/20260913T143000Z&details=Official+Single+Launch+by+Inyeneobong+Nsubong&location=The+Apostolic+Church,+69+Oron+Road,+Uyo,+Akwa+Ibom+State"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ripple inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-black tracking-wider transition-all hover:scale-105"
