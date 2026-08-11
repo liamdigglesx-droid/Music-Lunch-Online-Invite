@@ -2,7 +2,7 @@ import FadeIn from "./FadeIn";
 import { BookOpen, Mic2, Music2, Calendar } from "lucide-react";
 
 const details = [
-  { icon: Music2, label: "Song Title", value: "NO NEMANDS" },
+  { icon: Music2, label: "Song Title", value: "NO DEMANDS" },
   { icon: Mic2, label: "Artist", value: "Inyeneobong Nsubong" },
   { icon: BookOpen, label: "Scriptural Inspiration", value: "Romans 5:8" },
   { icon: Mic2, label: "Arranger", value: "JephMUSIC" },
