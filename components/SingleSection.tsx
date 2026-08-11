@@ -87,7 +87,7 @@ export default function SingleSection() {
                   This song is an invitation to pause and remember the depth of Christ&apos;s love. It is a call to respond with gratitude, worship and a life surrendered to Him.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed mt-3" style={{ fontFamily: "Lato, sans-serif" }}>
-                  My prayer is that everyone who hears &ldquo;NO NEMANDS&rdquo; will be reminded that the cross stands as the ultimate proof of God&apos;s mercy, grace and unfailing love.
+                  My prayer is that everyone who hears &ldquo;NO DEMANDS&rdquo; will be reminded that the cross stands as the ultimate proof of God&apos;s mercy, grace and unfailing love.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed mt-3" style={{ fontFamily: "Lato, sans-serif" }}>
                   May this song encourage hearts, strengthen faith and point many people to Jesus Christ—the One who gave everything so that we might have eternal life. Amen!
