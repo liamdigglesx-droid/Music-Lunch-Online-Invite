@@ -39,7 +39,7 @@ export default function SingleSection() {
             className="text-4xl sm:text-5xl font-black text-white"
             style={{ fontFamily: "Cinzel, serif" }}
           >
-            NO NEMANDS
+            NO DEMANDS
           </h2>
           <p className="mt-2 text-white/60 text-sm lowercase tracking-wide" style={{ fontFamily: "Lato, sans-serif" }}>
             ...He went alone
