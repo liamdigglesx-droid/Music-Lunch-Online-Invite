@@ -176,12 +176,12 @@ export default function HeroSection() {
               NO
             </h1>
             <h1
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-yellow-400 leading-none mb-6 gold-glow"
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-yellow-400 leading-none mb-1 gold-glow"
               style={{ fontFamily: "Cinzel, serif" }}
             >
               DEMANDS
             </h1>
-            <p className="mt-2 text-white/100 text-sm lowercase tracking-wide" style={{ fontFamily: "Lato, sans-serif" }}>
+            <p className="-mt-1 text-white/100 text-sm lowercase tracking-wide" style={{ fontFamily: "Lato, sans-serif" }}>
             ...He went alone
           </p>
             <p
