@@ -179,7 +179,7 @@ export default function HeroSection() {
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-yellow-400 leading-none mb-6 gold-glow"
               style={{ fontFamily: "Cinzel, serif" }}
             >
-              DEMAND
+              DEMANDS
             </h1>
 
             <p
