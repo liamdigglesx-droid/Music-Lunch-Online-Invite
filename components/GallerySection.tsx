@@ -14,6 +14,11 @@ const items = [
   { id: 8, img: "https://github.com/user-attachments/assets/74ad6bb9-ed38-4066-ab13-ed8d71a47bee", alt: "Group standing candid" },
   { id: 9, img: "https://github.com/user-attachments/assets/1a8d2399-964b-4cd8-992d-ae50b7710e04", alt: "Artist studio portrait" },
   { id: 10, img: "https://github.com/user-attachments/assets/4174589c-0cb2-482b-8718-d67c5d46beb9", alt: "Artist in blue suit" },
+  { id: 11, img: "https://github.com/user-attachments/assets/4df6b7b2-9680-4ea1-b26d-1daa5490d384", alt: "Gallery Image 7" },
+  { id: 12, img: "https://github.com/user-attachments/assets/8df2b9d6-006b-4cac-8a84-085a7530ce54", alt: "Gallery Image 8" },
+  { id: 13, img: "https://github.com/user-attachments/assets/edfea91c-4c20-4930-bef0-0c77b5cf7be7", alt: "Gallery Image 9" },
+  { id: 14, img: "https://github.com/user-attachments/assets/57ea6c56-fabd-452f-af14-c6045bd13d7a", alt: "Gallery Image 10" },
+  
 ];
 
 export default function GallerySection() {
