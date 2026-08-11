@@ -181,7 +181,7 @@ export default function HeroSection() {
             >
               DEMANDS
             </h1>
-            <p className="-mt-1 text-white/100 text-sm lowercase tracking-wide" style={{ fontFamily: "Lato, sans-serif" }}>
+            <p className="-mt-1 mb-6 text-white/100 text-sm lowercase tracking-wide" style={{ fontFamily: "Lato, sans-serif" }}>
             ...He went alone
           </p>
             <p
