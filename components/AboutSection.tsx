@@ -19,7 +19,7 @@ export default function AboutSection() {
         {/* Section label */}
         <FadeIn className="text-center mb-16">
           <p className="text-yellow-400 text-xs tracking-[0.4em] uppercase mb-3" style={{ fontFamily: "Lato, sans-serif" }}>
-            The Artist
+            The Artiste
           </p>
           <h2
             id="about-heading"
